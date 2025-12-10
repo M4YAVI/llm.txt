@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import ResultDisplay from "@/components/ResultDisplay";
 import StatusDisplay from "@/components/StatusDisplay";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function Home() {
   const [status, setStatus] = useState<"idle" | "loading" | "completed" | "error">("idle");

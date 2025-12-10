@@ -79,6 +79,23 @@ npm run dev
 4. Watch the terminal logs as the system crawls and analyzes the site.
 5. Copy or Download the generated `llms.txt`.
 
-## Troubleshooting
-- **Failed to fetch**: Ensure the backend is running on port 8000.
-- **Browser errors**: Run `crawl4ai-setup` again to ensure Playwright browsers are installed.
+## Deployment
+
+### Frontend (Vercel)
+1. Push your code to GitHub.
+2. Go to [Vercel](https://vercel.com/) and Import the project.
+3. Select the `frontend` directory as the Root Directory.
+4. Add Environment Variable:
+   - `NEXT_PUBLIC_API_URL`: The URL of your deployed backend (e.g., `https://your-backend.onrender.com`).
+5. Deploy!
+
+### Backend (Render/Railway/Fly.io)
+**Note**: The backend requires a Full Docker environment because of the browser crawler. **It will likely fail on Vercel Serverless Functions.**
+
+**Deploy on Render:**
+1. Create a `Web Service` connected to your repo.
+2. Select `backend` as the Root Directory.
+3. Choose `Docker` as the Runtime.
+4. Add Environment Variable:
+   - `GEMINI_API_KEY`: Your Gemini API key.
+5. Deploy.
