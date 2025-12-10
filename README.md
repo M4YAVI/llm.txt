@@ -8,6 +8,24 @@ Fail-safe, stylish, and fast microservice to turn any documentation site into a 
 - **Frontend**: Next.js 14 + Tailwind v4 + GSAP for a premium "Neon/Cyberpunk" experience.
 - **Real-time Feedback**: Live terminal logs streaming from backend to frontend.
 
+
+## Quick Start
+
+Open two terminals:
+
+**Terminal 1 (Backend)**:
+```bash
+cd backend
+# (Optional) .venv\Scripts\activate
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+**Terminal 2 (Frontend)**:
+```bash
+cd frontend
+bun dev
+```
+
 ## Prerequisites
 - **Python 3.11+**
 - **Node.js** (or Bun)
